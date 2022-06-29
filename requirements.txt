@@ -1,0 +1,29 @@
+# Running the code in this document installs all required packages and their dependencies for
+# executing all code in this repository. Here is also mentioned which package versions were used
+# during development, without guarantees that the code runs with different versions
+
+# Install Python 3.7.11 if not installed yet
+sudo apt-get update
+sudo apt-get install python3.7
+
+# Install Pip for python3
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py  # pip 21.0.1 (for installing python packages), setuptools 52.0.0.post20210125, wheel 0.37.0
+
+# Install required packages for python3
+python3 -m pip install tqdm  # tqdm 4.62.3 (for displaying progress of operations)
+python3 -m pip install DateTime  # DateTime 4.4 (for representing dates in a standardised format), zope.interface (from DateTime) 4.3.2, pytz (from DateTime) 2021.1
+python3 -m pip install matplotlib  # matplotlib 3.4.2 (for creating graphs)
+python3 -m pip install pandas  # pandas 1.1.5 (for dataframes and operations on it), python-dateutil 2.8.2, numpy 1.20.3, six>=1.5 (from python-dateutil>=2.7.3->pandas) 1.16.0, pytz>=2017.2 (from pandas) 2021.1 
+python3 -m pip install numpy  # numpy 1.20.3 (for mathematical operations)
+python3 -m pip install jellyfish  # jellyfish 0.9.0 (for approximate similarity and phonetic matching of strings)
+python3 -m pip install scipy  # scipy 1.5.4 (for calculating coordinate distances on a flat plane, and for statistical tests of results validation)
+python3 -m pip install pyproj  # pyproj 3.2.1 (for coordinate reference system transformations)
+python3 -m pip install haversine  # haversine 2.5.1 (for calculating coordinate distances on a spheroid)
+python3 -m pip install sklearn  # sklearn 0.0 (for creating a stratified random sample for validation)
+python3 -m pip install missingno  # missingno 0.5.1 (for visualising missingness patterns in data)
+python3 -m pip install openpyxl  # openpyxl 3.0.9 (for loading Excel documents)
+python3 -m pip install wptools  # wptools 0.4.17 (for querying Wikidata)
+python3 -m pip install requests  # requests 2.26.0 (for retrieving web information with ErfGeo Proxy query)
+python3 -m pip install urllib3  # urllib3 1.26.7 (for parsing place name string to its corresponding url encoding)
+# os (for paths to files in operating system), re (for regular expressions on strings) and datetime are (also) built-in python packages
